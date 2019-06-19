@@ -4,8 +4,6 @@ public interface Shape {
 
     String getShapeName();
 
-    double getField();
-
-
+    Double getField();
 
 }

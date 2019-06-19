@@ -1,7 +1,10 @@
 package com.kodilla.testing.collection;
+
 import org.junit.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class CollectionTestSuite {
 
@@ -47,9 +50,7 @@ public class CollectionTestSuite {
         ArrayList<Integer> result = exterminator.exterminate(oddAndEvenNumbers);
         System.out.println("Testing Normal List");
         //Then
-        ArrayList<Integer> correctResult = new ArrayList<>();
-        correctResult.add(6);
-        correctResult.add(4);
-        Assert.assertEquals(correctResult, result);
+        List<Integer> list = Arrays.asList(4,6);
+        Assert.assertEquals(list, result);
     }
 }
