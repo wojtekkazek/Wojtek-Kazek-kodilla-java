@@ -5,12 +5,12 @@ import java.lang.*;
 
 public class OddNumbersExterminator {
 
-    public ArrayList<Integer> exterminate(ArrayList<Integer> numbers) {
+    public ArrayList<Integer> exterminate(List<Integer> numbers) {
 
         ArrayList<Integer> oddNumbers = new ArrayList<>();
 
-        for(int n=0; n<numbers.size(); n++) {
-            if(numbers.get(n) %2 ==0) {
+        for (int n : numbers) {
+            if (numbers.get(n) % 2 == 0) {
                 oddNumbers.add(numbers.get(n));
             }
         }
@@ -18,5 +18,4 @@ public class OddNumbersExterminator {
         return oddNumbers;
 
     }
-
 }

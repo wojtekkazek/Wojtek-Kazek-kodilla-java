@@ -1,7 +1,9 @@
 package com.kodilla.stream;
 
+import com.kodilla.stream.beautifier.PoemBeautifier;
 import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.reference.FunctionalCalculator;
+
 
 public class StreamMain {
     public static void main(String[] args) {
@@ -17,5 +19,14 @@ public class StreamMain {
         expressionExecutor.executeExpression(3, 4, FunctionalCalculator::addAToB);
         expressionExecutor.executeExpression(3, 4, FunctionalCalculator::subBFromA);
         expressionExecutor.executeExpression(3, 4, FunctionalCalculator::divideAByB);
+
+        PoemBeautifier poemBeautifier = new PoemBeautifier();
+
+        poemBeautifier.beautify("poem1", (text) -> "ABC " + text + " ABC");
+        poemBeautifier.beautify("poem2", (text) -> text.toUpperCase());
+        poemBeautifier.beautify("poem3", (text) -> text.substring(2));
+        poemBeautifier.beautify("poem4", (text) -> text.trim());
+
     }
 }
+

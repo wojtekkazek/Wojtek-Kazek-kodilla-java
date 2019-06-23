@@ -87,14 +87,14 @@ public class BookDirectoryTestSuite {
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
     }
 
-
+/*
     @Test
     public void testListBooksInHandsOf_NoBooks() {
         //Given
         LibraryUser user = new LibraryUser("Adam", "Kowalski", "111111222222");
 
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
-        when(libraryDatabaseMock.listBooksInHandsOf(user)).thenReturn(new ArrayList<Book>());
+        when(libraryDatabaseMock.listBooksInHandsOf(user)).thenReturn(new ArrayList<>());
 
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
 
@@ -105,4 +105,42 @@ public class BookDirectoryTestSuite {
         assertEquals(0, books.size());
     }
 
+    @Test
+    public void testListBooksInHandsOf_1Book() {
+        //Given
+        LibraryUser user = new LibraryUser("Adam", "Kowalski", "111111222222");
+
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        when(libraryDatabaseMock.listBooksInHandsOf(user)).thenReturn(new ArrayList<Book>() {{
+            add(new Book("title", "author", 1000));
+        }});
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+
+        // When
+        List<Book> books = bookLibrary.listBooksInHandsOf(user);
+
+        // Then
+        assertEquals(1, books.size());
+    }
+
+    @Test
+    public void testListBooksInHandsOf_5Books() {
+        //Given
+        LibraryUser user = new LibraryUser("Adam", "Kowalski", "111111222222");
+
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        when(libraryDatabaseMock.listBooksInHandsOf(user)).thenReturn(new ArrayList<Book>() {{
+            for (int i=0; i<5; i++) {
+                add(new Book("title", "author", 1000 + 1));
+            }
+        }});
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+
+        // When
+        List<Book> books = bookLibrary.listBooksInHandsOf(user);
+
+        // Then
+        assertEquals(5, books.size());
+    }
+*/
 }

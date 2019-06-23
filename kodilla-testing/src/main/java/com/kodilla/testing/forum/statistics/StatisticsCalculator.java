@@ -2,7 +2,7 @@ package com.kodilla.testing.forum.statistics;
 
 public class StatisticsCalculator {
 
-    Statistics statistics;
+    private Statistics statistics;
     private int usersCount;
     private int postsCount;
     private int commentsCount;
