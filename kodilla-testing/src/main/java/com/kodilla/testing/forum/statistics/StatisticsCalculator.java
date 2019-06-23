@@ -12,9 +12,7 @@ public class StatisticsCalculator {
 
     public StatisticsCalculator(Statistics statistics) {
         this.statistics = statistics;
-    }
-
-    public void calculateAdvStatistics () {
+    } {
 
         usersCount = statistics.usersNames().size();
         postsCount = statistics.postsCount();

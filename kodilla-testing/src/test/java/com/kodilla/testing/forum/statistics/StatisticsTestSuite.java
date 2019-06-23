@@ -17,10 +17,8 @@ public class StatisticsTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.postsCount()).thenReturn(0);
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(0, statisticsCalculator.getPostsCount());
@@ -33,10 +31,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.postsCount()).thenReturn(0);
         when(statisticsMock.usersNames()).thenReturn(new ArrayList<String>(){{ add("bolek");}});
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(0.0, statisticsCalculator.getPostsPerUserAverage(), 0.01);
@@ -49,10 +45,8 @@ public class StatisticsTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.postsCount()).thenReturn(0);
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(0.0, statisticsCalculator.getCommentsPerPostAverage(), 0.01);
@@ -65,10 +59,8 @@ public class StatisticsTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.postsCount()).thenReturn(1000);
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(1000, statisticsCalculator.getPostsCount());
@@ -81,10 +73,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.postsCount()).thenReturn(1000);
         when(statisticsMock.usersNames()).thenReturn(new ArrayList<String>(){{add("bolek");}});
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(1000.0, statisticsCalculator.getPostsPerUserAverage(), 0.01);
@@ -97,10 +87,8 @@ public class StatisticsTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.postsCount()).thenReturn(1000);
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(0.0, statisticsCalculator.getCommentsPerPostAverage(), 0.01);
@@ -113,10 +101,8 @@ public class StatisticsTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.commentsCount()).thenReturn(0);
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(0, statisticsCalculator.getCommentsCount());
@@ -130,10 +116,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.commentsCount()).thenReturn(0);
         when(statisticsMock.usersNames()).thenReturn(new ArrayList<String>(){{add("bolek");}});
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(0.0, statisticsCalculator.getCommentsCount(),0.01);
@@ -147,10 +131,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.commentsCount()).thenReturn(0);
         when(statisticsMock.postsCount()).thenReturn(1);
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(0.0, statisticsCalculator.getCommentsPerPostAverage(),0.01);
@@ -164,10 +146,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.commentsCount()).thenReturn(5);
         when(statisticsMock.postsCount()).thenReturn(10);
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(0.5, statisticsCalculator.getCommentsPerPostAverage(),0.01);
@@ -181,10 +161,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.commentsCount()).thenReturn(30);
         when(statisticsMock.postsCount()).thenReturn(10);
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(3.0, statisticsCalculator.getCommentsPerPostAverage(),0.01);
@@ -197,10 +175,8 @@ public class StatisticsTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.usersNames()).thenReturn(new ArrayList<>());
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(0, statisticsCalculator.getUsersCount(),0.01);
@@ -214,10 +190,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.usersNames()).thenReturn(new ArrayList<>());
         when(statisticsMock.postsCount()).thenReturn(1);
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(0.0, statisticsCalculator.getPostsPerUserAverage(),0.01);
@@ -231,10 +205,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.usersNames()).thenReturn(new ArrayList<>());
         when(statisticsMock.commentsCount()).thenReturn(1);
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(0.0, statisticsCalculator.getCommentsPerUserAverage(),0.01);
@@ -251,10 +223,8 @@ public class StatisticsTestSuite {
                                                      }}
         );
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(100, statisticsCalculator.getUsersCount(),0.01);
@@ -272,10 +242,8 @@ public class StatisticsTestSuite {
         );
         when(statisticsMock.postsCount()).thenReturn(20);
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(0.2, statisticsCalculator.getPostsPerUserAverage(),0.01);
@@ -293,10 +261,8 @@ public class StatisticsTestSuite {
         );
         when(statisticsMock.commentsCount()).thenReturn(500);
 
-        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
-
         //When
-        statisticsCalculator.calculateAdvStatistics();
+        StatisticsCalculator statisticsCalculator = new StatisticsCalculator(statisticsMock);
 
         //Then
         Assert.assertEquals(5.0, statisticsCalculator.getCommentsPerUserAverage(),0.01);
