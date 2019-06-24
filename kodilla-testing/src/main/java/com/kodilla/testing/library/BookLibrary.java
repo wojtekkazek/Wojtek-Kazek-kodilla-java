@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookLibrary {
-    LibraryDatabase libraryDatabase;
+    private LibraryDatabase libraryDatabase;
 
     public BookLibrary(LibraryDatabase libraryDatabase) {
         this.libraryDatabase = libraryDatabase;
@@ -21,9 +21,6 @@ public class BookLibrary {
     }
 
     public List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
-        List<Book> bookList = new ArrayList<Book>();
-
-        // temporary returning list of no book
-        return bookList;
+        return libraryDatabase.listBooksInHandsOf(libraryUser);
     }
 }

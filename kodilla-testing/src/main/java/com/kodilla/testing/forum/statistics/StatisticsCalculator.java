@@ -12,7 +12,6 @@ public class StatisticsCalculator {
 
     public StatisticsCalculator(Statistics statistics) {
         this.statistics = statistics;
-    } {
 
         usersCount = statistics.usersNames().size();
         postsCount = statistics.postsCount();

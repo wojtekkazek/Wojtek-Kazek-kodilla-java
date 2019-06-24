@@ -4,6 +4,7 @@ import com.kodilla.testing.collection.OddNumbersExterminator;
 import org.junit.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CollectionTestSuite {
@@ -40,24 +41,23 @@ public class CollectionTestSuite {
         List<Integer> correctResult = new ArrayList<>();
         Assert.assertEquals(correctResult, result);
     }
-/*
+
     @Test
     public void testOddNumbersExterminatorNormalList() {
         //Given
-        ArrayList<Integer> oddAndEvenNumbers = new ArrayList<>();
+        List<Integer> oddAndEvenNumbers = new ArrayList<>();
         oddAndEvenNumbers.add(3);
         oddAndEvenNumbers.add(6);
         oddAndEvenNumbers.add(5);
         oddAndEvenNumbers.add(4);
         OddNumbersExterminator exterminator = new OddNumbersExterminator();
         //When
-        ArrayList<Integer> result = exterminator.exterminate(oddAndEvenNumbers);
+        List<Integer> result = exterminator.exterminate(oddAndEvenNumbers);
         System.out.println("Testing Normal List");
         //Then
-        ArrayList<Integer> list = (ArrayList<Integer>) Arrays.asList(4, 6);
+        List<Integer> list = Arrays.asList(6, 4);
         Assert.assertEquals(list, result);
     }
 
- */
 }
 

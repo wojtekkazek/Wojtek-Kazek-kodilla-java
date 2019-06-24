@@ -87,7 +87,6 @@ public class BookDirectoryTestSuite {
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
     }
 
-/*
     @Test
     public void testListBooksInHandsOf_NoBooks() {
         //Given
@@ -142,5 +141,5 @@ public class BookDirectoryTestSuite {
         // Then
         assertEquals(5, books.size());
     }
-*/
+
 }
