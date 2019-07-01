@@ -3,8 +3,6 @@ package com.kodilla.stream.array;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.OptionalDouble;
-
 import static com.kodilla.stream.array.ArrayOperations.getAverage;
 
 public class ArrayOperationsTestSuite {
@@ -12,13 +10,13 @@ public class ArrayOperationsTestSuite {
     @Test
     public void testGetAverage() {
         //Given
-        int[] numbers = new int[]{5,2,3};
+        int[] numbers = new int[]{};
 
         //When
-        OptionalDouble average = getAverage(numbers);
+        double average = getAverage(numbers);
 
         //Then
-        Assert.assertEquals(3.33, average.getAsDouble(), 0.01);
+        Assert.assertEquals(Double.NaN, average, 0.01);
 
     }
 
