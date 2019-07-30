@@ -19,16 +19,16 @@ public class FlightsFinderRunner {
         availableFlights.add(new Flight("KRK","WRO"));
 
         FlightsFinder flightsFinder = new FlightsFinder();
-/*
+
         for(Flight flight: availableFlights) {
             System.out.println(flight);
         }
 
         System.out.println();
 
- */
 
-        if(flightsFinder.findFlight(flight1, availableFlights, 1)) {
+
+        if(flightsFinder.findFlight(flight1, availableFlights, 2)) {
             System.out.println("Connection is available");
         } else {
             System.out.println("Connection is not available, try with more flight changes");
