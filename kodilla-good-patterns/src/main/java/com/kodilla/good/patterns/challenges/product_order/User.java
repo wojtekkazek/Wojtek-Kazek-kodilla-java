@@ -15,4 +15,12 @@ public class User {
     public String getNick() {
         return nick;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
 }
