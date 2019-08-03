@@ -11,7 +11,7 @@ public class Forum {
     public Forum() {
         usersList.add(new ForumUser(01, "user1",ForumUserSex.M, LocalDate.of(2000, Month.JANUARY,1),10));
         usersList.add(new ForumUser(02, "user2",ForumUserSex.F, LocalDate.of(1950, Month.JANUARY,1),10));
-        usersList.add(new ForumUser(03, "user3",ForumUserSex.M, LocalDate.of(1999, Month.JANUARY,1),10));
+        usersList.add(new ForumUser(03, "user3",ForumUserSex.M, LocalDate.of(1999, Month.AUGUST,2),10));
         usersList.add(new ForumUser(04, "user4",ForumUserSex.M, LocalDate.of(1980, Month.JANUARY,1),0));
     }
 
