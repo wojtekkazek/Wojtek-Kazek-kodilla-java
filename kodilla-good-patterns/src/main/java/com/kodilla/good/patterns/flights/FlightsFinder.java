@@ -11,7 +11,7 @@ public class FlightsFinder {
         this.flights = flights;
     }
 
-    public void lookForFlight (String departureAirport, String arrivalAirport) {
+    public void lookForFlight(String departureAirport, String arrivalAirport) {
 
         if (isFlightPossible(departureAirport, arrivalAirport)) {
             System.out.println("Travel from " + departureAirport + " to " + arrivalAirport + " is available");
@@ -23,11 +23,11 @@ public class FlightsFinder {
 
     public boolean isFlightPossible(String departureAirport, String arrivalAirport) {
 
-                for (Flight flight : flights) {
+        for (Flight flight : flights) {
 
-            if (flight.getDepartureAirport() == departureAirport) {
+            if (flight.getDepartureAirport().equals(departureAirport)) {
 
-                if (flight.getArrivalAirport() == arrivalAirport) {
+                if (flight.getArrivalAirport().equals(arrivalAirport)) {
                     return true;
                 }
 
@@ -44,17 +44,17 @@ public class FlightsFinder {
 
     public void showDirectFlightsFromDestination(List<Flight> flights, String departureAirport) {
 
-            System.out.println("Available flights from " + departureAirport + ":");
-            flights.stream()
-                    .filter(flight -> flight.getDepartureAirport() == departureAirport)
-                    .forEach(System.out::println);
+        System.out.println("Available flights from " + departureAirport + ":");
+        flights.stream()
+                .filter(flight -> flight.getDepartureAirport().equals(departureAirport))
+                .forEach(System.out::println);
     }
 
     public void showDirectFlightsToDestination(List<Flight> flights, String arrivalAirport) {
 
         System.out.println("Available flights to " + arrivalAirport + ":");
         flights.stream()
-                .filter(flight -> flight.getArrivalAirport() == arrivalAirport)
+                .filter(flight -> flight.getArrivalAirport().equals(arrivalAirport))
                 .forEach(System.out::println);
     }
 
