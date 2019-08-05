@@ -1,12 +1,12 @@
-package com.kodilla.good.patterns.food2Door;
+package com.kodilla.good.patterns.food2door;
 
-public class Order {
+public class OrderItem {
 
     private Shop shop;
     private Product product;
     private double quantity;
 
-    public Order(Shop shop, Product product, double quantity) {
+    public OrderItem(Shop shop, Product product, double quantity) {
         this.shop = shop;
         this.product = product;
         this.quantity = quantity;

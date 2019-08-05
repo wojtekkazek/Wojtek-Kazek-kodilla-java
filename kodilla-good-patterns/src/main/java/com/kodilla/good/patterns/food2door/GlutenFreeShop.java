@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.food2Door;
+package com.kodilla.good.patterns.food2door;
 
 public class GlutenFreeShop implements Shop {
 
@@ -7,7 +7,7 @@ public class GlutenFreeShop implements Shop {
         return "GlutenFreeShop";
     }
 
-    public boolean process(Order order) {
+    public boolean process(OrderItem order) {
 
         if (order.getProduct().isContainingGluten()) {
             return false;

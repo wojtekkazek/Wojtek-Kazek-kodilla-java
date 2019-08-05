@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.food2Door;
+package com.kodilla.good.patterns.food2door;
 
 public class NewShop implements Shop {
 
@@ -6,7 +6,7 @@ public class NewShop implements Shop {
         return "NewShop";
     }
 
-    public boolean process(Order order) {
+    public boolean process(OrderItem order) {
         return false;
     }
 

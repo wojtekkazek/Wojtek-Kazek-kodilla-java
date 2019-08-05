@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.food2Door;
+package com.kodilla.good.patterns.food2door;
 
 public class HealthyShop implements Shop {
 
@@ -7,7 +7,7 @@ public class HealthyShop implements Shop {
         return "HealthyShop";
     }
 
-    public boolean productNameContainsWordHealthy(Order order) {
+    public boolean productNameContainsWordHealthy(OrderItem order) {
 
         String keyWord = "Healthy";
 
@@ -18,7 +18,7 @@ public class HealthyShop implements Shop {
 
     }
 
-    public boolean process(Order order) {
+    public boolean process(OrderItem order) {
 
         if (productNameContainsWordHealthy(order)) {
             return true;
