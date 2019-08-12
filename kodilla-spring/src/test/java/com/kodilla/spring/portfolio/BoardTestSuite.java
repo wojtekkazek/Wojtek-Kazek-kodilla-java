@@ -1,6 +1,5 @@
 package com.kodilla.spring.portfolio;
 
-import com.kodilla.spring.reader.ReaderConfig;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -13,7 +12,7 @@ public class BoardTestSuite {
     @Test
     public void BoardTestSuite() {
         //Given
-        ApplicationContext context = new AnnotationConfigApplicationContext(ReaderConfig.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(BoardConfig.class);
         //When
         Board board = context.getBean(Board.class);
         List<String> list1 = board.getToDoList().getTasks();
