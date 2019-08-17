@@ -7,9 +7,7 @@ public class BigmacTestSuite {
     @Test
     public void testBigMac() {
         //Given
-        BigMac bigMac = new BigMac.BigMacBuilder()
-                .bun(BigMac.BigMacBuilder.WITHSESAME)
-                .burgers(3)
+        BigMac bigMac = new BigMac.BigMacBuilder("with sesame", 3)
                 .sauce(BigMac.BigMacBuilder.BARBECUE)
                 .ingredient(BigMac.BigMacBuilder.PRAWNS)
                 .ingredient(BigMac.BigMacBuilder.MUSHROOMS)

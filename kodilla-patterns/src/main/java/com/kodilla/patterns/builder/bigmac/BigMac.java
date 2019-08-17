@@ -18,18 +18,13 @@ public final class BigMac {
         public static final String WITHSESAME = "with sesame";
         public static final String NOSESAME = "no sesame";
 
-        public BigMacBuilder bun(String bun) {
+        public BigMacBuilder(String bun, int burgers) {
             if (bun.equals(WITHSESAME) || bun.equals(NOSESAME)) {
                 this.bun = bun;
+                this.burgers = burgers;
             } else {
                 throw new IllegalStateException("Bun should be WITHSESAME or NOSESAME!");
             }
-            return this;
-        }
-
-        public BigMacBuilder burgers(int burgers) {
-            this.burgers = burgers;
-            return this;
         }
 
         public static final String STANDARD = "standard";
@@ -60,15 +55,15 @@ public final class BigMac {
         }
 
         public BigMac build() {
-            return new BigMac(bun, burgers, sauce, ingredients);
+            return new BigMac(this);
         }
     }
 
-    public BigMac(String bun, int burgers, String sauce, List<String> ingredients) {
-        this.bun = bun;
-        this.burgers = burgers;
-        this.sauce = sauce;
-        this.ingredients = new ArrayList<>(ingredients);
+    public BigMac(BigMacBuilder builder) {
+        this.bun = builder.bun;
+        this.burgers = builder.burgers;
+        this.sauce = builder.sauce;
+        this.ingredients = new ArrayList<>(builder.ingredients);
     }
 
     public String getBun() {
