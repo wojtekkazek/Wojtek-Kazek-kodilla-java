@@ -1,12 +1,14 @@
 package com.kodilla.patterns.factory.tasks;
 
 public class PaintingTask implements Task{
+    private TaskClass taskClass;
     private String taskName;
     private String color;
     private String whatToPaint;
 
-    public PaintingTask(String taskName, String color, String whatToPaint) {
-        this.taskName = taskName;
+    public PaintingTask(TaskClass taskClass, String color, String whatToPaint) {
+        this.taskClass = taskClass;
+        this.taskName = taskClass.getTaskName();
         this.color = color;
         this.whatToPaint = whatToPaint;
     }
