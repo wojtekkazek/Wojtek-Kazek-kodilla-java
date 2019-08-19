@@ -2,14 +2,14 @@ package com.kodilla.patterns.factory.tasks;
 
 public class TaskFactory {
 
-    public final Task createTask(final TaskClass taskClass) {
-        switch (taskClass) {
+    public final Task createTask(final TaskName taskName) {
+        switch (taskName) {
             case SHOPPING:
-                return new ShoppingTask(TaskClass.SHOPPING, "anything", 5);
+                return new ShoppingTask("anything", 5);
             case PAINTING:
-                return new PaintingTask(TaskClass.PAINTING, "Blue", "anything");
+                return new PaintingTask("Blue", "anything");
             case DRIVING:
-                return new DrivingTask(TaskClass.DRIVING, "anywhere", "Car");
+                return new DrivingTask("anywhere", "Car");
             default:
                 return null;
         }
