@@ -143,9 +143,13 @@ public class CompanyDaoTestSuite {
 
         //When
         List<Company> namesBegginingWith = companyDao.retrieveCompaniesWithNameStartingFrom("Dat");
+        List<Company> namesHavingInTheMiddle = companyDao.retrieveCompaniesWithNameStartingFrom("ata");
+        List<Company> namesBeginningWithFourChars = companyDao.retrieveCompaniesWithNameStartingFrom("Data");
 
         //Then
         Assert.assertEquals(1, namesBegginingWith.size());
+        Assert.assertEquals(0, namesHavingInTheMiddle.size());
+        Assert.assertEquals(0, namesBeginningWithFourChars.size());
 
         //CleanUp
         try {
