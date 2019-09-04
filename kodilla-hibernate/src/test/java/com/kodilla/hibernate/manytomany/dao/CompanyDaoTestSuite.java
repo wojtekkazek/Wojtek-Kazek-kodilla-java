@@ -142,14 +142,14 @@ public class CompanyDaoTestSuite {
         int greyMatterId = greyMatter.getId();
 
         //When
-        List<Company> namesBegginingWith = companyDao.retrieveCompaniesWithNameStartingFrom("Dat");
-        List<Company> namesHavingInTheMiddle = companyDao.retrieveCompaniesWithNameStartingFrom("ata");
-        List<Company> namesBeginningWithFourChars = companyDao.retrieveCompaniesWithNameStartingFrom("Data");
+        List<Company> namesBegginingWith = companyDao.retrieveCompaniesWithNameStartingFrom("Dat%");
+        List<Company> namesHavingInTheMiddle = companyDao.retrieveCompaniesWithNameStartingFrom("ata%");
+        List<Company> namesBeginningWithFourChars = companyDao.retrieveCompaniesWithNameStartingFrom("Data%");
 
         //Then
         Assert.assertEquals(1, namesBegginingWith.size());
         Assert.assertEquals(0, namesHavingInTheMiddle.size());
-        Assert.assertEquals(0, namesBeginningWithFourChars.size());
+        Assert.assertEquals(1, namesBeginningWithFourChars.size());
 
         //CleanUp
         try {
