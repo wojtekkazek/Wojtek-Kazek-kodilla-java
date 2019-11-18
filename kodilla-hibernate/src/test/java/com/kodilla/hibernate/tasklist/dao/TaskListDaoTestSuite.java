@@ -32,7 +32,7 @@ public class TaskListDaoTestSuite {
         taskListDao.save(taskList);
 
         //Then
-        Assert.assertEquals(taskList.getListName(),"Task 17.2");
+        Assert.assertEquals(taskList.getListName(),"ToDo List");
 
         //CleanUp
         taskListDao.deleteById(taskList.getId());

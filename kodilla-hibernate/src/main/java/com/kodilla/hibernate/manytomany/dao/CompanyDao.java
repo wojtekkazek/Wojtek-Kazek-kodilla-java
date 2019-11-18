@@ -13,6 +13,6 @@ import java.util.List;
 public interface CompanyDao extends CrudRepository<Company, Integer> {
 
     @Query(nativeQuery = true)
-    List<Company> retrieveCompaniesWithNameStartingFrom(@Param("NAMEBEGINNING") String nameBeginning);
+    List<Company> retrieveCompaniesWithNameContaining(@Param("NAMEPART") String namePart);
 
 }

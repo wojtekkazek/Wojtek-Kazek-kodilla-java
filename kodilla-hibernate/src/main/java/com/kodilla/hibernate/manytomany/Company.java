@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @NamedNativeQuery(
-        name = "Company.retrieveCompaniesWithNameStartingFrom",
+        name = "Company.retrieveCompaniesWithNameContaining",
         query = "SELECT * FROM COMPANIES" +
-                " WHERE COMPANY_NAME like :NAMEBEGINNING",
+                " WHERE COMPANY_NAME like :NAMEPART",
         resultClass = Company.class
 )
 @Entity
