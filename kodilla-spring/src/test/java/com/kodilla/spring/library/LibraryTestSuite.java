@@ -12,29 +12,29 @@ import java.util.Arrays;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class LibraryTestSuite {
-    @Test
-    public void testLoadFromDb() {
-        //Given
-        ApplicationContext context =
-                new AnnotationConfigApplicationContext("com.kodilla.spring");
-        LibrarySecond library = context.getBean(LibrarySecond.class);
-        //When
-        library.loadFromDb();
-        //Then
-        //do nothing
-    }
-
-    @Test
-    public void testSaveToDb() {
-        //Given
-        ApplicationContext context =
-                new AnnotationConfigApplicationContext("com.kodilla.spring");
-        LibrarySecond library = context.getBean(LibrarySecond.class);
-        //When
-        library.saveToDb();
-        //Then
-        //do nothing
-    }
+//    @Test
+//    public void testLoadFromDb() {
+//        //Given
+//        ApplicationContext context =
+//                new AnnotationConfigApplicationContext("com.kodilla.spring.library");
+//        LibrarySecond library = context.getBean(LibrarySecond.class);
+//        //When
+//        library.loadFromDb();
+//        //Then
+//        //do nothing
+//    }
+//
+//    @Test
+//    public void testSaveToDb() {
+//        //Given
+//        ApplicationContext context =
+//                new AnnotationConfigApplicationContext("com.kodilla.spring.library");
+//        LibrarySecond library = context.getBean(LibrarySecond.class);
+//        //When
+//        library.saveToDb();
+//        //Then
+//        //do nothing
+//    }
 
     @Test
     public void testContext() {
